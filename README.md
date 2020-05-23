@@ -79,3 +79,7 @@ This is also the reason that sets do not preserve the order of the objects you a
 
 Note that sets aren't faster than lists in general -- membership test is faster for sets, and so is removing an element. As long as you don't need these operations, lists are often faster.
 ```
+
+## 11-12. Quiz Optimizing - Common Books
+
+Looks like using sets to compute the intersection is indeed most efficient in this case!
