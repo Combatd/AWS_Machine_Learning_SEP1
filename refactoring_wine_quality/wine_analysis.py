@@ -15,6 +15,14 @@ import pandas as pd
 # refactored for modularity
 def calculate_columns(data_file):
     df = pd.read_csv(data_file, sep=';')
-    return df.head()
+    return df
 
-calculate_columns('winequality-red.csv')
+calculate_columns('winequality-red.csv').head()
+
+# median_alcohol = df.alcohol.median()
+# for i, alcohol in enumerate(df.alcohol):
+#     if alcohol >= median_alcohol:
+#         df.loc[i, 'alcohol'] = 'high'
+#     else:
+#         df.loc[i, 'alcohol'] = 'low'
+# df.groupby('alcohol').quality.mean()
