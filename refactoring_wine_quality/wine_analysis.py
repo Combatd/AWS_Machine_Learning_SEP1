@@ -27,19 +27,31 @@ calculate_columns('winequality-red.csv').head()
 #         df.loc[i, 'alcohol'] = 'low'
 # df.groupby('alcohol').quality.mean()
 
-median_alcohol = df.alcohol.median()
-median_pH = df.pH.median()
-median_sugar = df.residual_sugar.median()
-median_citric_acid = df.citric_acid.median()
-def calculate_median(column_name, median_category):
-    for i, element in enumerate(df.column_name):
-        if element >= median_category:
+# median_alcohol = df.alcohol.median()
+# median_pH = df.pH.median()
+# median_sugar = df.residual_sugar.median()
+# median_citric_acid = df.citric_acid.median()
+# def calculate_median(column_name, median_category):
+#     for i, element in enumerate(df.column_name):
+#         if element >= median_category:
+#             df.loc[i, column_name] = 'high'
+#         else:
+#             df.loc[i, column_name] = 'low'
+#     df.groupby(column_name).quality.mean()
+
+# calculate_median("alcohol", median_alcohol)
+# calculate_median("pH", median_pH)
+# calculate_median("sugar", median_sugar)
+# calculate_median("citric_acid", median_citric_acid)
+
+def numeric_to_buckets(df, column_name):
+    median = df[column_name].median()
+    for i, val in enumerate(df[column_name]):
+        if val >= median:
             df.loc[i, column_name] = 'high'
         else:
-            df.loc[i, column_name] = 'low'
-    df.groupby(column_name).quality.mean()
+            df.loc[i, column_name] = 'low' 
 
-calculate_median("alcohol", median_alcohol)
-calculate_median("pH", median_pH)
-calculate_median("sugar", median_sugar)
-calculate_median("citric_acid", median_citric_acid)
+for feature in df.columns[:-1]:
+    numeric_to_buckets(df, feature)
+    print(df.groupby(feature).quality.mean(), '\n')
