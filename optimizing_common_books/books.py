@@ -2,6 +2,9 @@ import time
 import pandas as pd
 import numpy as np
 
+# find the common book ids in books_published_last_two_years.txt and 
+# all_coding_books.txt to obtain a list of recent coding books.
+
 with open('books_published_last_two_years.txt') as f:
     recent_books = f.read().split('\n')
     
