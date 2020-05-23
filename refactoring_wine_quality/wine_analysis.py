@@ -13,8 +13,8 @@ import pandas as pd
 # 4	7.4	0.70	0.00	1.9	0.076	11.0	34.0	0.9978	3.51	0.56	9.4
 
 # refactored for modularity
-def rename_columns(data_file):
+def calculate_columns(data_file):
     df = pd.read_csv(data_file, sep=';')
     return df.head()
 
-rename_columns('winequality-red.csv')
+calculate_columns('winequality-red.csv')
