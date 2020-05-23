@@ -67,3 +67,15 @@ Knowing how to write code that runs efficiently is another essential skill in so
 * Take up less space in memory/storage
 
 The project you're working on would determine which of these is more important to optimize for your company or product. When we are performing lots of different transformations on large amounts of data, this can make orders of magnitudes of difference in performance.
+
+## 10. Optimizing - Common Books
+
+Searching on Google to find on Stack Overflow "why sets are faster than lists"
+
+```
+Sets are implemented using hash tables. Whenever you add an object to a set, the position within the memory of the set object is determined using the hash of the object to be added. When testing for membership, all that needs to be done is basically to look if the object is at the position determined by its hash, so the speed of this operation does not depend on the size of the set. For lists, in contrast, the whole list needs to be searched, which will become slower as the list grows.
+
+This is also the reason that sets do not preserve the order of the objects you add.
+
+Note that sets aren't faster than lists in general -- membership test is faster for sets, and so is removing an element. As long as you don't need these operations, lists are often faster.
+```
