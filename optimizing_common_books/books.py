@@ -31,6 +31,6 @@ print('Duration: {} seconds'.format(time.time() - start))
 # Use the set's intersection method to get the common elements in recent_books and coding_books.
 
 start = time.time()
-recent_coding_books = coding_books.intersection() # TODO: compute intersection of lists
+recent_coding_books = set(coding_books).intersection(recent_books) # TODO: compute intersection of lists
 print(len(recent_coding_books))
 print('Duration: {} seconds'.format(time.time() - start))
