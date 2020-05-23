@@ -20,3 +20,17 @@ for book in recent_books:
 
 print(len(recent_coding_books))
 print('Duration: {} seconds'.format(time.time() - start))
+
+# Use numpy's `intersect1d` method to get the intersection of the `recent_books` and `coding_books` arrays.
+
+start = time.time()
+recent_coding_books = np.intersect1d(coding_books, recent_books) # TODO: compute intersection of lists
+print(len(recent_coding_books))
+print('Duration: {} seconds'.format(time.time() - start))
+
+# Use the set's intersection method to get the common elements in recent_books and coding_books.
+
+start = time.time()
+recent_coding_books = coding_books.intersection() # TODO: compute intersection of lists
+print(len(recent_coding_books))
+print('Duration: {} seconds'.format(time.time() - start))
