@@ -80,6 +80,18 @@ This is also the reason that sets do not preserve the order of the objects you a
 Note that sets aren't faster than lists in general -- membership test is faster for sets, and so is removing an element. As long as you don't need these operations, lists are often faster.
 ```
 
-## 11-12. Quiz Optimizing - Common Books
+## 11-12. Quiz: Optimizing - Common Books
 
 Looks like using sets to compute the intersection is indeed most efficient in this case!
+
+## 13-14. Quiz: Optimizing - Holiday Gifts
+
+``` total_price = (gift_costs[gift_costs < 25]).sum() * 1.08  ```
+
+## 15. Documentation
+* DOCUMENTATION: additional text or illustrated information that comes with or is embedded in the code of software.
+* Helpful for clarifying complex parts of code, making your code easier to navigate, and quickly conveying how and why different components of your program are used.
+* Several types of documentation can be added at different levels of your program:
+    * In-line Comments - line level
+    * Docstrings - module and function level
+    * Project Documentation - project level
