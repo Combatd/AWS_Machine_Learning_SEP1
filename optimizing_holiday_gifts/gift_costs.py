@@ -25,5 +25,7 @@ start = time.time()
 
 total_price = sum(gift_costs[gift_costs < 25]) * 1.08 # TODO: compute the total price after tax
 
+# total_price = (gift_costs[gift_costs < 25]).sum() * 1.08 fastest solution
+
 print(total_price)
 print('Duration: {} seconds'.format(time.time() - start))
