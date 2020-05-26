@@ -144,3 +144,8 @@ Translating all your ideas and thoughts formally on paper can be a little diffic
 readable
 * Docstrings explain the purpose of a function or module
 * You can add whatever details you want in a docstring
+
+## 20. Version Control in Data Science
+Data Scientists use git for version control and follow certain
+procedures also used by Software Engineers, such as creating different
+branches!
